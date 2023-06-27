@@ -38,7 +38,7 @@ h2 {
 h3 {
   font-size: 12px; }
 
-/* estilos textos*/
+/* estilos textos */
 .contenedor {
   margin: 10px;
   height: auto;
@@ -47,14 +47,12 @@ h3 {
   grid-template-areas: "header header" "nota 1 nota2";
   gap: 10px;
   text-align: center; }
-
-.nota1 {
-  background-color: whitesmoke;
-  grid-area: nota1; }
-
-.nota2 {
-  background-color: whitesmoke;
-  grid-area: nota2; }
+  .contenedor .nota1 {
+    background-color: whitesmoke;
+    grid-area: nota1; }
+  .contenedor .nota2 {
+    background-color: whitesmoke;
+    grid-area: nota2; }
 
 .contenedortexto {
   display: flex;
@@ -64,36 +62,31 @@ h3 {
   background-color: whitesmoke;
   margin-top: 10px;
   padding: 10px; }
-
-.mediana {
-  color: #103f79;
-  flex-basis: 100%;
-  max-width: 80vh; }
-
-.texto {
-  color: #103f79;
-  flex-basis: 100%;
-  text-align: center; }
+  .contenedortexto .mediana {
+    color: #103f79;
+    flex-basis: 100%;
+    max-width: 80vh; }
+  .contenedortexto .texto {
+    color: #103f79;
+    flex-basis: 100%;
+    text-align: center; }
 
 .formulario {
   padding: 10px;
   color: #f3b229;
   width: 350px;
   align-content: end; }
-
-.form-box {
-  border: 2px solid #f3b229;
-  text-align: center;
-  padding: 10px; }
-
-title {
-  text-align: left; }
-
-.campos {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  width: 300px;
-  text-align: center; }
+  .formulario .form-box {
+    border: 2px solid #f3b229;
+    text-align: center;
+    padding: 10px; }
+  .formulario title {
+    text-align: left; }
+  .formulario .campos {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 300px;
+    text-align: center; }
 
 .redes {
   width: 25px;
@@ -118,54 +111,51 @@ title {
   margin: 25px auto;
   font-family: Arial, Helvetica, sans-serif;
   min-width: 500px; }
-
-.tabla thead tr {
-  background-color: #103f79;
-  color: #f3b229;
-  text-align: center; }
-
-.tabla td {
-  background-color: whitesmoke;
-  color: #103f79; }
-
-.tabla tbody tr {
-  border-bottom: 1px solid #d6d4d4; }
-
-@media (max-width: 500px) {
-  /* Estilos para celular */
-  .tabla {
-    min-width: unset;
-    width: 100%;
-    margin: 25px 0; } }
+  .tabla thead tr {
+    background-color: #103f79;
+    color: #f3b229;
+    text-align: center; }
+  .tabla td {
+    background-color: whitesmoke;
+    color: #103f79; }
+  .tabla tbody tr {
+    border-bottom: 1px solid #d6d4d4; }
+  @media (max-width: 500px) {
+    .tabla {
+      /* Estilos para celular */
+      min-width: unset;
+      width: 100%;
+      margin: 25px 0; } }
 
 .contacto-gral {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center; }
+  .contacto-gral .mediana-hin {
+    flex: 1;
+    margin-right: 20px; }
+  .contacto-gral .formulario {
+    flex: 1;
+    margin-bottom: 20px; }
+  .contacto-gral .mapa {
+    width: 100%;
+    margin-left: 25%; }
+  @media (max-width: 768px) {
+    .contacto-gral {
+      /* Estilos para tablet y celular */
+      flex-direction: column;
+      align-items: center; }
+      .contacto-gral .mediana-hin,
+      .contacto-gral .formulario {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%; }
+      .contacto-gral .mapa {
+        margin-top: 0;
+        text-align: center; } }
 
-.mediana-hin {
-  flex: 1;
-  margin-right: 20px; }
-
-.formulario {
-  flex: 1;
-  margin-bottom: 20px; }
-
-.mapa {
-  width: 100%;
-  margin-left: 25%; }
-
-@media (max-width: 768px) {
-  /* Estilos para tablet y celular */
-  .contacto-gral {
-    flex-direction: column;
-    align-items: center; }
-  .mediana-hin,
-  .formulario {
-    margin-right: 0;
-    margin-bottom: 20px;
-    width: 100%; }
-  .mapa {
-    margin-top: 0;
-    text-align: center; } }
+.contenedortexto .texto {
+  column-count: 2;
+  column-gap: 2rem;
+  column-rule: 2px solid; }

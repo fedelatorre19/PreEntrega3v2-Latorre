@@ -3,154 +3,213 @@
 @import "../utilidades/mixin";
 @import "../utilidades/extend";
 
-body{
-    background-color: nth($lista-colores, 1);
+body {
+  background-color: nth($lista-colores, 1);
 }
 
-
-header{background-color: nth($lista-colores, 2);
-    color:  nth($lista-colores, 1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+  background-color: nth($lista-colores, 2);
+  color: nth($lista-colores, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-
-
-footer{color: nth($lista-colores, 3);
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    align-items: center;
+footer {
+  color: nth($lista-colores, 3);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
 }
 
+table {
+  color: nth($lista-colores, 2);
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+}
 
-table{color:nth($lista-colores, 2);margin: auto;margin-top: 10px;text-align: center;}
- 
-h1{color:  nth($lista-colores, 1);}
-h2{color: nth($lista-colores, 2);font-size: small;}
-h3{font-size: 12px;}  
+h1 {
+  color: nth($lista-colores, 1);
+}
 
+h2 {
+  color: nth($lista-colores, 2);
+  font-size: small;
+}
 
-  /* estilos textos*/
-  .contenedor{
-      margin: 10px;
-      height: auto;
-      grid-template-columns: auto;
-      grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
-      grid-template-areas:
-      "header header"
-      "nota 1 nota2";
-      gap: 10px;
-      text-align: center;
-     
-  }
-  .nota1{background-color: nth($lista-colores, 3);grid-area: nota1;}
-  .nota2{background-color:nth($lista-colores, 3);grid-area: nota2;}
- 
- 
-  .contenedortexto {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+h3 {
+  font-size: 12px;
+}
+
+/* estilos textos */
+.contenedor {
+  margin: 10px;
+  height: auto;
+  grid-template-columns: auto;
+  grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
+  grid-template-areas:
+    "header header"
+    "nota 1 nota2";
+  gap: 10px;
+  text-align: center;
+
+  .nota1 {
     background-color: nth($lista-colores, 3);
-    margin-top: 10px;
-    padding: 10px;
+    grid-area: nota1;
   }
-  
+
+  .nota2 {
+    background-color: nth($lista-colores, 3);
+    grid-area: nota2;
+  }
+}
+
+.contenedortexto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: nth($lista-colores, 3);
+  margin-top: 10px;
+  padding: 10px;
+
   .mediana {
     color: nth($lista-colores, 1);
     flex-basis: 100%;
     max-width: 80vh;
   }
-  
+
   .texto {
     color: nth($lista-colores, 1);
     flex-basis: 100%;
     text-align: center;
   }
+}
 
-  %border{border-collapse: collapse;min-width: 550px;}
-  %border-tr{border-bottom: 1px solid nth($lista-colores, 2);}
- .formulario{padding: 10px; color: nth($lista-colores, 2);width: 350px;align-content: end;}
-  .form-box {border: 2px solid nth($lista-colores, 2);text-align: center;padding: 10px;}
-  title{text-align: left;}
-  .campos{margin-bottom: 10px;padding-bottom: 10px;width: 300px;text-align: center;}
-.redes{@include redes}
-.pequeña{@include pequeña}
-.mediana{@include mediana}
-.mediana-hin{@include mediana; margin: 10px;padding-right: 10px;}
+%border {
+  border-collapse: collapse;
+  min-width: 550px;
+}
+
+%border-tr {
+  border-bottom: 1px solid nth($lista-colores, 2);
+}
+
+.formulario {
+  padding: 10px;
+  color: nth($lista-colores, 2);
+  width: 350px;
+  align-content: end;
+
+  .form-box {
+    border: 2px solid nth($lista-colores, 2);
+    text-align: center;
+    padding: 10px;
+  }
+
+  title {
+    text-align: left;
+  }
+
+  .campos {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 300px;
+    text-align: center;
+  }
+}
+
+.redes {
+  @include redes;
+}
+
+.pequeña {
+  @include pequeña;
+}
+
+.mediana {
+  @include mediana;
+}
+
+.mediana-hin {
+  @include mediana;
+  margin: 10px;
+  padding-right: 10px;
+}
 
 .tabla {
-    border-style: none;
-    margin: 25px auto; 
-    font-family: Arial, Helvetica, sans-serif;
-    min-width: 500px;
-  }
-  
-  .tabla thead tr {
+  border-style: none;
+  margin: 25px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 500px;
+
+  thead tr {
     background-color: $color-principal;
     color: $color-secundario;
     text-align: center;
   }
-  
-  .tabla td {
+
+  td {
     background-color: $color-cuerpo;
     color: $color-principal;
   }
-  
-  .tabla tbody tr {
+
+  tbody tr {
     border-bottom: 1px solid $color-cuerpo2;
   }
-  
+
   @media (max-width: 500px) {
     /* Estilos para celular */
-    .tabla {
-      min-width: unset;
-      width: 100%;
-      margin: 25px 0;
-    }
+    min-width: unset;
+    width: 100%;
+    margin: 25px 0;
   }
+}
 
 .contacto-gral {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
   .mediana-hin {
     flex: 1;
     margin-right: 20px;
   }
-  
+
   .formulario {
     flex: 1;
     margin-bottom: 20px;
   }
-  
+
   .mapa {
     width: 100%;
-    margin-left: 25%;}
-  
+    margin-left: 25%;
+  }
+
   @media (max-width: 768px) {
     /* Estilos para tablet y celular */
-    .contacto-gral {
-      flex-direction: column;
-      align-items: center;
-    }
-    
+    flex-direction: column;
+    align-items: center;
+
     .mediana-hin,
     .formulario {
       margin-right: 0;
       margin-bottom: 20px;
       width: 100%;
     }
-    
+
     .mapa {
       margin-top: 0;
       text-align: center;
     }
   }
+}
+
+.contenedortexto .texto {
+  column-count: 2;
+  column-gap: 2rem;
+  column-rule: 2px solid;
+}
