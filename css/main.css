@@ -44,7 +44,8 @@ h3 {
   height: auto;
   grid-template-columns: auto;
   grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
-  grid-template-areas: "header header" "nota 1 nota2";
+  grid-template-areas: "header header"
+ "nota 1 nota2";
   gap: 10px;
   text-align: center; }
   .contenedor .nota1 {
@@ -106,20 +107,23 @@ h3 {
   margin: 10px;
   padding-right: 10px; }
 
-.tabla {
-  border-style: none;
-  margin: 25px auto;
-  font-family: Arial, Helvetica, sans-serif;
-  min-width: 500px; }
+  .tabla {
+    border-style: none;
+    margin: 25px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    min-width: 500px;
+  }
   .tabla thead tr {
     background-color: #103f79;
+     border: 0.3px solid #103f79;
     color: #f3b229;
     text-align: center; }
   .tabla td {
     background-color: whitesmoke;
     color: #103f79; }
   .tabla tbody tr {
-    border-bottom: 1px solid #d6d4d4; }
+    border: 10px solid #103f79;}
   @media (max-width: 500px) {
     .tabla {
       /* Estilos para celular */
